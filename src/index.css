@@ -1,5 +1,43 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
 
+  body{
+    font: 1.0rem Helvetica;
+    font-family: 'Manrope', sans-serif;
+}
+
+
+header{
+    padding: 150px 0 100px;
+    background-image: url('./img/header.jpg');
+    object-fit: cover;
+    justify-content: center;
+}
+
+header .container {
+    padding-top: 0;
+    padding-bottom: 348px;
+    height: 100%;
+}
+
+.content{
+    display: grid;
+}
+
+
+.footer{
+    color:darkgray;
+    background-color: rgba(0, 0, 0, 0.945);
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .social-media-icons {
+      display: grid;
+      grid-template-columns: 2fr 2fr 2fr;
+      padding: 0 10px 0 10px;
+  }
 
 /* header */
 
@@ -10,5 +48,41 @@ nav{
 .navbar-brand{
     margin: auto o;
     max-width: 1200px;
+    text-decoration: none;
+    color:white
 }
+
+.navbar-brand:hover {
+    color:white;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-button {
+    color:white;
+}
+
+@media screen and (min-width: 600px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    nav ul{
+        visibility: hidden;
+    }
+
+    nav{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+
+
+/** home **/
 
