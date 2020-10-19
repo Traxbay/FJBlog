@@ -4,6 +4,7 @@ import Navigation from './components/Navigation'
 import Home from './components/Home'
 import Blogs from './components/Blogs'
 import Footer from './components/Footer'
+import Services from './components/Services'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <div className='content'>
                 <Route path='/blogs' component={Blogs} />
                 <Route path='/' component={Home}  exact={true}/>
+                <Route path='/' component={Services} />
             </div>
             <Footer />
           </div>
