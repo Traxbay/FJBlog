@@ -1,25 +1,27 @@
-import React from 'react';
-import { BrowserRouter, Route} from 'react-router-dom';
+import React, {Component} from 'react';
+import { Route} from 'react-router-dom';
 import Navigation from './components/Navigation'
 import Home from './components/Home'
 import Blogs from './components/Blogs'
 import Footer from './components/Footer'
 import Services from './components/Services'
+import About from './components/About'
 
-function App() {
+class App extends Component {
+  render(){
   return (
-    <BrowserRouter>
       <div className='grid-container'>
           <Navigation />
-            <div className='content'>
+            <div className='content'>  
                 <Route path='/blogs' component={Blogs} />
-                <Route path='/' component={Home}  exact={true}/>
-                <Route path='/' component={Services} />
+                <Route path='/about' component={About} />
+                <Route path='/' component={Home}  exact/>
+                <Route path='/' component={Services} exact/>
             </div>
             <Footer />
           </div>
-    </BrowserRouter>
   );
+}
 }
 
 export default App;
